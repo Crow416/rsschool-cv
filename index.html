@@ -1,12 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CV</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/Roboto.ttf" as="font" type="font/ttf">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="favicon.svg">
+  <title>CV</title>
 </head>
-<body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-
+<body class="body">
+  <header class="header">
+    <nav>
+      <ul class="header__nav">
+        <li><a class="header__nav-item" href="#skills">Skills</a></li>
+        <li><a class="header__nav-item" href="#code">Code</a></li>
+        <li><a class="header__nav-item" href="#projects">Projects</a></li>
+        <li><a class="header__nav-item" href="#education">Education</a></li>
+        <li><a class="header__nav-item" href="#languages">Languages</a></li>
+        <li><a class="header__nav-item" href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="about">
+      <img class="about__image" src="images/photo.png" alt="My photo">
+      <div class="about__desc">
+        <h1>Alexey Voronov</h1>
+        <p>
+          I aspire to become a valuable employee in a team of professionals. My goal is to contribute to the success of the company and grow with it. I am ready to work on challenging tasks and learn new things in order to achieve a high level of professionalism.
+        </p>
+        <p>
+          My strengths include responsibility, organization, and teamwork skills. I believe that these qualities will help me succeed in any role.
+        </p>
+        <p>
+          Unfortunately, I do not have any work experience in my field, but I actively pursue this area and strive to gain the necessary knowledge and skills.
+        </p>
+        <p>
+          I am willing to learn and discover new things to meet the requirements of the company. I welcome constructive criticism and am open to improving my skills and abilities.
+        </p>
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <h2 class="section__heading">Skills</h2>
+      <ul class="skills__list">
+        <li class="skills__item">
+          <img src="images/icons/html.svg" alt="html icon">  
+          HTML
+        </li>
+        <li class="skills__item">
+          <img src="images/icons/css.svg" alt="css icon">
+          CSS
+        </li>
+        <li class="skills__item">
+          <img src="images/icons/js.svg" alt="js icon">
+          JavaScript
+        </li>
+        <li class="skills__item">
+          <img src="images/icons/sass.svg" alt="sass icon">
+          Sass
+        </li>
+        <li class="skills__item">
+          <img src="images/icons/git.svg" alt="git icon">
+          Git
+        </li>
+        <li class="skills__item">
+          <img src="images/icons/figma.svg" alt="figma icon">
+          Figma
+        </li>
+      </ul>
+    </section>
+    <section class="code" id="code">
+      <h2 class="section__heading">Code example</h2>
+      <pre class="code__example">
+        <code>
+          function slidesPlugin(activeSlide = 0) {
+            const slides = document.querySelectorAll('.slide');
+          
+            slides[activeSlide].classList.add('active');
+          
+            for (const slide of slides) {
+              slide.addEventListener('click', () => {
+                clearActiveClasses(slide);
+          
+                slide.classList.add('active');
+              });
+            }
+          
+            function clearActiveClasses() {
+              slides.forEach((slide) => {
+                slide.classList.remove('active');
+              });
+            }
+          }
+          
+          function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+          }
+          
+          const randomSlide = getRandomInt(5);
+          
+          slidesPlugin(randomSlide);
+        </code>
+      </pre>
+    </section>
+    <section class="projects" id="projects">
+      <h2 class="section__heading">My projects</h2>
+      <h3><a href="https://github.com/Crow416/russian-travel">Traveling around Russia</a></h3>
+      <h3><a href="https://github.com/Crow416/mesto">"Mesto" is an interactive page where users can share photos</a></h3>
+    </section>
+    <section class="education" id="education">
+      <h2 class="section__heading">Education</h2>
+      <p>2024 - RS School - Front-end</p>
+    </section>
+    <section class="languages" id="languages">
+      <h2 class="section__heading">Languages</h2>
+      <p>English language - B1</p>
+    </section>
+    <section class="contacts" id="contacts">
+      <h2 class="section__heading">Contacts</h2>
+      <ul>
+        <li><a href="mailto:moon_storm@mail.ru">E-mail: moon_storm@mail.ru</a></li>
+        <li><a href="https://t.me/Alex_Crowl">Telegram</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <a href="https://github.com/Crow416"><img src="images/icons/github.svg" alt="github icon"></a>
+    <p>2024</p>
+    <a href="https://rs.school/courses/javascript-ru"><img class="footer__logo" src="images/rs-school-logo.svg" alt="rs school logo"></a>
+  </footer>
 </body>
 </html>
